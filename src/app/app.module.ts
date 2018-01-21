@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {NgxTypeaheadModule} from 'ngx-typeahead';
+import { StaticListComponent } from './static-list/static-list.component';
+import { HttpListComponent } from './http-list/http-list.component';
+import { CustomTemplateListComponent } from './custom-template-list/custom-template-list.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StaticListComponent,
+    HttpListComponent,
+    CustomTemplateListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, NgxTypeaheadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

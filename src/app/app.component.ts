@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {query} from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  public url = 'http://suggestqueries.google.com/complete/search';
+  public params = {
+    hl: 'en',
+    ds: 'yt',
+    xhr: 't',
+    client: 'youtube',
+    q: query,
+  };
+  public search = '';
+
+  handleResultSelected (result) {
+    this.search = result;
+  }
 }
